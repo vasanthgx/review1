@@ -36,7 +36,7 @@ Other related work, not doing segmentation per se, has proposed to first localiz
 
 This section describes how to detect and segment the object, or objects, in an image
 A set of rudimentary region-based detection of parts of the object are done (Section 3.1).
-Using those regions as initialization, the Laplacian propagation method, presented, is applied.
+Using those regions as initialization, the Laplacian propagation method, presented, is applied(Figure 3).
 The segmented image and input image are processed through the feature extraction and classification pipeline (Section 4) and the final classification is obtained
 
 ### Understanding the Laplacian Propagation in Semi-Supervised Learning
@@ -47,9 +47,9 @@ The segmented image and input image are processed through the feature extraction
 
 ![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp3.png)
 
-![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp5.png)
+![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp4.png)
 
-)
+![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp5.png)
 
 
 ## Detecting object-specific regions
