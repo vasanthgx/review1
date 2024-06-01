@@ -6,7 +6,7 @@
 # Project Title
 
 
-**Ablation Study - Effect of depth and breadth of Neural Networks on performance**
+**Literature Review  - "Efficient object detection and segmentation for fine-grained recognition" published in 2013 at the IEEE Conference on Computer Vision and Pattern Recognition**
  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/b3fef2db-e671-4610-bb84-1d65533dc5fb" width="300" align='right'>
 
 <br><br>
@@ -18,7 +18,9 @@ This task is often referred to as finegrained recognition [(1,2)] and requires e
 Segmentation is helpful to extract the contours of the object of interest, which can provide good features for recognition
 Another benefit of a detection and segmentation algorithm is that it can localize the object, which will be beneficial, especially if the object is not in the center of the image or is of size, different from the other objects’ sizes.
 The authors' method segments the possible object of interest before trying to recognize it, is much faster than previous counterparts, is applicable to a variety of different super-categories, e.g. birds, flowers, and cats and dogs, and improves the recognition performance for fine-grained classification tasks.
-The authors tested the proposed algorithm on this 578class dataset and observed 4.41% improvement in recognition performance compared to the baseline algorithm
+The authors tested the proposed algorithm on this 578class dataset and observed 4.41% improvement in recognition performance compared to the baseline algorithm.
+
+![alt text](https://github.com/vasanthgx/review1/blob/main/images/fig1.png)
 
 ## Previous work
 
