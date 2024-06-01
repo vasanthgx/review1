@@ -49,7 +49,7 @@ The segmented image and input image are processed through the feature extraction
 
 ![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp4.png)
 
-![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp5.png)
+
 
 
 ## Detecting object-specific regions
@@ -67,6 +67,8 @@ The authors set fi to be the (R,G,B) color values of the pixel, mostly motivated
 Djj i=1 where Dii = j=1 N W ij and Y are the desired labels for some the pixels
 Those label constraints can be very useful to impose prior knowledge of what is an object and background.
 This is a standard Laplacian label propagation formulation [28], and the equation above is often written in an equivalent and more convenient form: C(X) = XT (I − S)X + λ|X − Y |2.
+
+![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp7.png)
 
 ## Optimization
 The optimization problem in Equation 1 can be solved iteratively as in [28]. Alternatively, it can be solved as a linear system of equations, which is the approach the authors chose.
