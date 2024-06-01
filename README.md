@@ -174,16 +174,6 @@ The authors' future work will consider improvements to the feature model, e.g. r
 
 
 
-
-
-## Acknowledgements
-
-
- - [Tensorflow datasets - Fashion MNIST](https://www.tensorflow.org/api_docs/python/tf/keras/datasets/fashion_mnist/load_data)
- - [Image Segmentaion](https://www.tensorflow.org/tutorials/generative/autoencoder)
- 
-
-
 ## Contact
 
 If you have any feedback/are interested in collaborating, please reach out to me at vasanth_1627@gmail.com
