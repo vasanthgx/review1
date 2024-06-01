@@ -86,6 +86,8 @@ The authors note here that the authors re-extract features from the segmented im
 The authors believe this is crucial for the improvements the authors achieved.
 The authors' segmentation run-time allows it to be run as a part of standard recognition pipelines at test time, which had not been possible before, and is a significant advantage
 
+![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp6.png)
+
 ## Experiments
 
 The authors show experimental results of the proposed algorithm on a number of fine-grained recognition benchmarks: Oxford 102 flowers [17], Caltech-UCSD 200 birds [2, 26], and the recent Oxford Cats and Dogs [20] datasets.
