@@ -39,6 +39,17 @@ A set of rudimentary region-based detection of parts of the object are done (Sec
 Using those regions as initialization, the Laplacian propagation method, presented, is applied.
 The segmented image and input image are processed through the feature extraction and classification pipeline (Section 4) and the final classification is obtained
 
+### Understanding the Laplacian Propagation in Semi-Supervised Learning
+
+![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp1.png)
+
+![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp2.png)
+
+![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp3.png)
+
+![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp4.png)
+
+
 ## Detecting object-specific regions
 The authors start the method with an initial search for regions possibly belonging to an object from the super-class.
 Using the features above, the authors train a classification model to decide if a region belongs to a super-class or the background.
