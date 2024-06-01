@@ -24,20 +24,20 @@ The authors tested the proposed algorithm on this 578class dataset and observed 
 
 ## Previous work
 
-Fine-grained recognition is a topic of large practical importance and many recent works have addressed such tasks including recognition of flowers [17], birds [2, 8, 26], cats and dogs [19, 20], tree-leaves [15].
-Segmentation has played an important role in object recognition with many algorithms available [1, 4, 21]
-In another body of works, called co-segmentation [3, 13], better models are trained by exploiting shared appearance features in images containing the same class of objects.
+Fine-grained recognition is a topic of large practical importance and many recent works have addressed such tasks including recognition of flowers , birds , cats and dogs, tree-leaves.
+Segmentation has played an important role in object recognition with many algorithms available
+In another body of works, called co-segmentation, better models are trained by exploiting shared appearance features in images containing the same class of objects.
 These approaches are either too slow or are targeted for segmentation during training.
-Segmentation has been popular as an initial step for object detection [10] or scene interpretation [11]
-Those methods typically work with small coherent regions on the image and feed the low-level segmentations to object detection pipelines [10].
-Other related work, not doing segmentation per se, has proposed to first localize the potential object region and utilize this information during recognition [14, 22, 23]
+Segmentation has been popular as an initial step for object detection  or scene interpretation.
+Those methods typically work with small coherent regions on the image and feed the low-level segmentations to object detection pipelines.
+Other related work, not doing segmentation per se, has proposed to first localize the potential object region and utilize this information during recognition.
 
 ## Object detection and segmentation
 
 This section describes how to detect and segment the object, or objects, in an image
-A set of rudimentary region-based detection of parts of the object are done (Section 3.1).
+A set of rudimentary region-based detection of parts of the object are done.
 Using those regions as initialization, the Laplacian propagation method, presented, is applied(Figure 3).
-The segmented image and input image are processed through the feature extraction and classification pipeline (Section 4) and the final classification is obtained
+The segmented image and input image are processed through the feature extraction and classification pipeline and the final classification is obtained
 
 ### Understanding the Laplacian Propagation in Semi-Supervised Learning
 
@@ -58,7 +58,7 @@ Using the features above, the authors train a classification model to decide if 
 Using ground truth segmentation of training images, the authors consider super-pixel regions with large overlap with the foreground and background ground truth areas, as positive and negative examples, respectively.
 When no ground truth is available, the authors start from an approximate segmentation and iteratively improve the segmentation by applying the trained model.
 Each model is used to segment the training images anew; the newly segmented images are used as ‘ground truth’ for building an improved model, and so on.
-This procedure is standard in other segmentation works [3].
+This procedure is standard in other segmentation works.
 As shown later in the experiments, the authors have the same algorithms for both training of the model and detection for flowers, birds, cats and dogs
 
 ## Full-object segmentation
@@ -71,7 +71,7 @@ This is a standard Laplacian label propagation formulation [28], and the equatio
 ![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp7.png)
 
 ## Optimization
-The optimization problem in Equation 1 can be solved iteratively as in [28]. Alternatively, it can be solved as a linear system of equations, which is the approach the authors chose.
+The optimization problem in Equation 1 can be solved iteratively as in. Alternatively, it can be solved as a linear system of equations, which is the approach the authors chose.
 After differentiation of Equation 1 the authors obtain an optimal solution for X, which the authors solve as a system of linear equations: In the implementation the authors use the Conjugate Gradient method, with preconditioning, and achieve very fast convergence.
 Since the diffusion properties of the foreground and background of different images may vary, the authors consider separate segmentations for the detected foreground only-areas and background-only areas, respectively
 This is done since the segmentation with respect to one of them could be good but not with respect to the other and combining the results of foreground and background segmentations produces more coherent segmentation and takes advantage of their complementary functions.
@@ -90,7 +90,7 @@ The authors' segmentation run-time allows it to be run as a part of standard rec
 
 ## Experiments
 
-The authors show experimental results of the proposed algorithm on a number of fine-grained recognition benchmarks: Oxford 102 flowers [17], Caltech-UCSD 200 birds [2, 26], and the recent Oxford Cats and Dogs [20] datasets.
+The authors show experimental results of the proposed algorithm on a number of fine-grained recognition benchmarks: Oxford 102 flowers, Caltech-UCSD 200 birds, and the recent Oxford Cats and Dogs datasets.
 In each case the authors report the performance of the baseline classification algorithm, the best known benchmark results achieved on this dataset, and the proposed algorithm in the same settings.
 The authors compare to the baseline algorithm, because it measures how much the proposed segmentation has contributed to the improvement in classification performance.
 The authors measure the performance on the large-scale 578-category flower dataset
@@ -99,19 +99,19 @@ The authors measure the performance on the large-scale 578-category flower datas
 Oxford 102 flowers dataset is a well-known dataset for fine-grained recognition proposed by Nilsback and Zisserman [17].
 The dataset contains 102 species of flowers and a total of 8189 images, each category containing between 40 and 200 images.
 It has well established protocols for training and testing, which the authors adopt too.
-A lot of methods have been tested on this dataset [3, 12, 17, 18], including some segmentation-based [3, 17].
-The performance of the approach on this dataset is 80.66%, which outperforms all previous known methods in the literature [3, 12, 17, 18].
+A lot of methods have been tested on this dataset, including some segmentation-based.
+The performance of the approach on this dataset is 80.66%, which outperforms all previous known methods in the literature.
 One important thing to note is that the improvement of the algorithm over the baseline is about 4%, and the only difference between the two is the addition of the proposed segmentation algorithm and the features extracted from the segmented image
 
 ## Caltech-UCSD 200 birds species dataset
 
-Caltech-UCSD-200 Birds dataset [26] is a very challenging dataset containing 200 species of birds.
+Caltech-UCSD-200 Birds dataset is a very challenging dataset containing 200 species of birds.
 Apart from very fine-differences between different species of birds, what makes the recognition hard in this dataset is the variety of poses, large variability in scales, and very rich backgrounds in which the birds often blend in.
-The best classification performance achieved on this data is 16.2% classification rate by [3].
-Even when using ground truth bounding boxes, provided as annotations with the dataset [26], the reported results have been around 19% [26, 27] and most recently 24.3% [3], but the latter result uses crude ground truth segmentation of each bird
+The best classification performance achieved on this data is 16.2% classification rate by.
+Even when using ground truth bounding boxes, provided as annotations with the dataset , the reported results have been around 19% and most recently 24.3% , but the latter result uses crude ground truth segmentation of each bird
 
 ## Method
-The authors' baseline Nilsback and Zisserman [17] Ito and Cubota [12] Nilsback and Zisserman [18] Chai, Bicos method [3] Chai, BicosMT method [3] Ours Ours: improvement over the baseline.
+The authors' baseline Nilsback and Zisserman  Ito and Cubota  Nilsback and Zisserman  Chai, Bicos method Chai, BicosMT method  Ours Ours: improvement over the baseline.
 The authors' algorithm shows improvement over all known prior approaches, when no ground truth bounding boxes are used
 In this case the authors observed 17.5% classification rate compared to previous 15.7% and 16.2%, The authors' baseline algorithm here achieves only 14.4% which in on par with the performance of SPM-type methods in this scenario.
 Another thing to notice here is that the improvement over the baseline, when no bounding boxes information is known, is larger than the improvement with bounding boxes.
@@ -119,12 +119,12 @@ This underlines the importance of the proposed automatic detection and segmentat
 
 ## Oxford Cats and Dogs dataset
 
-Oxford Cats and Dogs [20] is a new dataset for fine-grained classification which contains 6033 images of 37 breeds of cats and dogs.
-Parkhi et al, who collected the dataset, showed impressive performance on this dataset [20]
-They apply segmentation at test time, as is done here, but their algorithm is based on Grabcut [21], The authors' baseline Chai, Bicos segmentation [3] Chai, BicosMT segmentation [3] Ours Ours, improvement over the baseline.
+Oxford Cats and Dogs  is a new dataset for fine-grained classification which contains 6033 images of 37 breeds of cats and dogs.
+Parkhi et al, who collected the dataset, showed impressive performance on this dataset.
+They apply segmentation at test time, as is done here, but their algorithm is based on Grabcut , The authors' baseline Chai, Bicos segmentation  Chai, BicosMT segmentation  Ours Ours, improvement over the baseline.
 The authors compared the performance on this dataset with the prespecified protocol proposed in the paper (Table 4)
 For this dataset too, the authors see that the general method outperforms the best category-specific one from [20] and is far better than their more general approach or a bag of words-based method.
-Note that [20] reported classification when using cat and dog head annotations or ground truth segmentation during testing, whereas here the experiments do not use such information
+Note that they reported classification when using cat and dog head annotations or ground truth segmentation during testing, whereas here the experiments do not use such information.
 
 ## Large-scale 578 flower species dataset
 
