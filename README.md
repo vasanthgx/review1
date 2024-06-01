@@ -47,7 +47,9 @@ The segmented image and input image are processed through the feature extraction
 
 ![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp3.png)
 
-![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp4.png)
+![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp5.png)
+
+)
 
 
 ## Detecting object-specific regions
