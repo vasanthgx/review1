@@ -138,6 +138,8 @@ The performance of the segmentation algorithm can be further improved after adap
 
 ## Findings
 
+![alt text](https://github.com/vasanthgx/review1/blob/main/images/tables.png)
+
 The authors observed more than a 4% improvement in the recognition performance on a challenging large-scale flower dataset, containing 578 species of flowers and 250,000 images.
 The authors' algorithm achieves 30.17% classification performance compared to 19.2 [27] in the same setting, which in an improvement of 11% over the best known baselines in this scenario
 Another interesting observation is that the algorithm achieves a performance of 27.60% when applying segmentation alone.
