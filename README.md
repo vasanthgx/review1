@@ -16,7 +16,7 @@
 This paper addresses the problem of classifying objects that belong to the same basic level category, e.g. species of birds, flowers, etc
 This task is often referred to as finegrained recognition [(1,2)] and requires expert, domainspecific knowledge, which very few people generally have.
 Segmentation is helpful to extract the contours of the object of interest, which can provide good features for recognition
-Another benefit of a detection and segmentation algorithm is that it can localize the object, which will be beneficial, especially if the object is not in the center of the image or is of size, different from the other objects’ sizes.
+Another benefit of a detection and segmentation algorithm is that it can localize the object, which will be beneficial, especially if the object is not in the center of the image or is of size, different from the other objects’ si
 The authors' method segments the possible object of interest before trying to recognize it, is much faster than previous counterparts,(Figure 1) is applicable to a variety of different super-categories, e.g. birds, flowers, and cats and dogs, and improves the recognition performance for fine-grained classification tasks.
 The authors tested the proposed algorithm on this 578class dataset and observed 4.41% improvement in recognition performance compared to the baseline algorithm.
 
@@ -66,7 +66,7 @@ Let Ij denote the j-th pixel in an image and fj denotes its feature representati
 The authors set fi to be the (R,G,B) color values of the pixel, mostly motivated by speed of computation, but other choices are possible too.
 Djj i=1 where Dii = j=1 N W ij and Y are the desired labels for some the pixels
 Those label constraints can be very useful to impose prior knowledge of what is an object and background.
-This is a standard Laplacian label propagation formulation [28], and the equation above is often written in an equivalent and more convenient form: C(X) = XT (I − S)X + λ|X − Y |2.
+This is a standard Laplacian label propagation formulation, and the equation above is often written in an equivalent and more convenient form: C(X) = XT (I − S)X + λ|X − Y |2.
 
 ![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp7.png)
 
@@ -95,7 +95,7 @@ In each case the authors report the performance of the baseline classification a
 The authors compare to the baseline algorithm, because it measures how much the proposed segmentation has contributed to the improvement in classification performance.
 The authors measure the performance on the large-scale 578-category flower dataset
 
-## Oxford 102 flower species dataset
+## [Oxford 102 flower species dataset](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
 Oxford 102 flowers dataset is a well-known dataset for fine-grained recognition proposed by Nilsback and Zisserman [17].
 The dataset contains 102 species of flowers and a total of 8189 images, each category containing between 40 and 200 images.
 It has well established protocols for training and testing, which the authors adopt too.
@@ -103,7 +103,7 @@ A lot of methods have been tested on this dataset, including some segmentation-b
 The performance of the approach on this dataset is 80.66%, which outperforms all previous known methods in the literature.
 One important thing to note is that the improvement of the algorithm over the baseline is about 4%, and the only difference between the two is the addition of the proposed segmentation algorithm and the features extracted from the segmented image
 
-## Caltech-UCSD 200 birds species dataset
+## [Caltech-UCSD 200 birds species dataset](https://authors.library.caltech.edu/records/cvm3y-5hh21)
 
 Caltech-UCSD-200 Birds dataset is a very challenging dataset containing 200 species of birds.
 Apart from very fine-differences between different species of birds, what makes the recognition hard in this dataset is the variety of poses, large variability in scales, and very rich backgrounds in which the birds often blend in.
@@ -117,13 +117,13 @@ In this case the authors observed 17.5% classification rate compared to previous
 Another thing to notice here is that the improvement over the baseline, when no bounding boxes information is known, is larger than the improvement with bounding boxes.
 This underlines the importance of the proposed automatic detection and segmentation of the object, which allows to ‘zoom in’ on the object, especially for largescale datasets for which providing bounding boxes or other ground truth information will be infeasible
 
-## Oxford Cats and Dogs dataset
+## [Oxford Cats and Dogs dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/)
 
 Oxford Cats and Dogs  is a new dataset for fine-grained classification which contains 6033 images of 37 breeds of cats and dogs.
 Parkhi et al, who collected the dataset, showed impressive performance on this dataset.
 They apply segmentation at test time, as is done here, but their algorithm is based on Grabcut , The authors' baseline Chai, Bicos segmentation  Chai, BicosMT segmentation  Ours Ours, improvement over the baseline.
 The authors compared the performance on this dataset with the prespecified protocol proposed in the paper (Table 4)
-For this dataset too, the authors see that the general method outperforms the best category-specific one from [20] and is far better than their more general approach or a bag of words-based method.
+For this dataset too, the authors see that the general method outperforms the best category-specific one from them  and is far better than their more general approach or a bag of words-based method.
 Note that they reported classification when using cat and dog head annotations or ground truth segmentation during testing, whereas here the experiments do not use such information.
 
 ## Large-scale 578 flower species dataset
