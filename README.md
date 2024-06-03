@@ -71,8 +71,8 @@ This is a standard Laplacian label propagation formulation, and the equation abo
 ![alt text](https://github.com/vasanthgx/review1/blob/main/images/lp7.png)
 
 ## Optimization
-The optimization problem in Equation 1 can be solved iteratively as in. Alternatively, it can be solved as a linear system of equations, which is the approach the authors chose.
-After differentiation of Equation 1 the authors obtain an optimal solution for X, which the authors solve as a system of linear equations: In the implementation the authors use the Conjugate Gradient method, with preconditioning, and achieve very fast convergence.
+The optimization problem can be solved iteratively. Alternatively, it can be solved as a linear system of equations, which is the approach the authors chose.
+After differentiation  the authors obtain an optimal solution for X, which the authors solve as a system of linear equations: In the implementation the authors use the Conjugate Gradient method, with preconditioning, and achieve very fast convergence.
 Since the diffusion properties of the foreground and background of different images may vary, the authors consider separate segmentations for the detected foreground only-areas and background-only areas, respectively
 This is done since the segmentation with respect to one of them could be good but not with respect to the other and combining the results of foreground and background segmentations produces more coherent segmentation and takes advantage of their complementary functions.
 The bottom right image shows the solution of the Laplacian propagation, given the initial regions.
@@ -96,7 +96,7 @@ The authors compare to the baseline algorithm, because it measures how much the 
 The authors measure the performance on the large-scale 578-category flower dataset
 
 ## [Oxford 102 flower species dataset](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
-Oxford 102 flowers dataset is a well-known dataset for fine-grained recognition proposed by Nilsback and Zisserman [17].
+Oxford 102 flowers dataset is a well-known dataset for fine-grained recognition proposed by Nilsback and Zisserman.
 The dataset contains 102 species of flowers and a total of 8189 images, each category containing between 40 and 200 images.
 It has well established protocols for training and testing, which the authors adopt too.
 A lot of methods have been tested on this dataset, including some segmentation-based.
@@ -141,7 +141,7 @@ The performance of the segmentation algorithm can be further improved after adap
 ![alt text](https://github.com/vasanthgx/review1/blob/main/images/tables.png)
 
 The authors observed more than a 4% improvement in the recognition performance on a challenging large-scale flower dataset, containing 578 species of flowers and 250,000 images.
-The authors' algorithm achieves 30.17% classification performance compared to 19.2 [27] in the same setting, which in an improvement of 11% over the best known baselines in this scenario
+The authors' algorithm achieves 30.17% classification performance compared to 19.2  in the same setting, which in an improvement of 11% over the best known baselines in this scenario
 Another interesting observation is that the algorithm achieves a performance of 27.60% when applying segmentation alone.
 The authors' algorithm shows improvement over all known prior approaches, when no ground truth bounding boxes are used
 In this case the authors observed 17.5% classification rate compared to previous 15.7% and 16.2%, The authors' baseline algorithm here achieves only 14.4% which in on par with the performance of SPM-type methods in this scenario.
